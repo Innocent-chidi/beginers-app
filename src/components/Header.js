@@ -6,9 +6,6 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [bars, setBars] = useState(true)
-  const [mobileState, setMobileState] = useState(false)
-
-  let barsDisplay = bars ? <FaBars /> : <FaTimes />
 
   const handleMobileChange = () => {
     setBars(!bars)
@@ -18,12 +15,12 @@ const Header = () => {
     <div className="Header">
       <img src={logoImage} alt="logo" className="logo" />
       <div className="mobile-icon" onClick={handleMobileChange}>
-        {barsDisplay}
+        {bars ? <FaBars /> : <FaTimes />}
       </div>
-      <ul className="nav-menu">
-        <li><Link to="/" className="nav-item">Home</Link></li>
-        <li><Link to="about" className="nav-item">About</Link></li>
-        <li><Link to="contact" className="nav-item">Contact</Link></li>
+      <ul className={bars ? 'nav-menu' : 'nav-menu show'}>
+        <li><Link to="/" className="nav-item" onClick={handleMobileChange}>Home</Link></li>
+        <li><Link to="about" className="nav-item" onClick={handleMobileChange}>About</Link></li>
+        <li><Link to="contact" className="nav-item" onClick={handleMobileChange}>Contact</Link></li>
       </ul>
     </div>
   )
