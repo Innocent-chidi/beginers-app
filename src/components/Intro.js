@@ -1,6 +1,5 @@
 import "../css/Intro.css"
 import introImage from "../images/intro.jpg"
-
 const Intro = () => {
   return (
     <div className="intro">

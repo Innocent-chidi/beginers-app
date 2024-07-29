@@ -6,6 +6,10 @@
     padding: 0 100px;
     position: relative;
     height: 20vh;
+    top: 0;
+    position: sticky;
+    z-index: 900;
+    background-color: aliceblue;
 }
 
 .logo {

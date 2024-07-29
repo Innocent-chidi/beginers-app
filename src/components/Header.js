@@ -21,6 +21,7 @@ const Header = () => {
         <li><Link to="/" className="nav-item" onClick={handleMobileChange}>Home</Link></li>
         <li><Link to="about" className="nav-item" onClick={handleMobileChange}>About</Link></li>
         <li><Link to="contact" className="nav-item" onClick={handleMobileChange}>Contact</Link></li>
+        <li><Link to="contactMe" className="nav-item" onClick={handleMobileChange}>Contact Me</Link></li>
       </ul>
     </div>
   )

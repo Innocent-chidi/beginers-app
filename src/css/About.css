@@ -1,0 +1,19 @@
+.about {
+    /* border: 3px solid green; */
+    padding: 50px 100px;
+    display: flex;
+    gap: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+    .about-image {
+        order: 0;
+    }
+    .about-text {
+        order: 1;
+    }
+}
